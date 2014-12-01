@@ -1,0 +1,703 @@
+
+
+Real robot run #2, single particle mode (noise off)
+Gather real measurement data to use in simulation mode
+Real position from meas: x=277, y=232, orient = 0.314
+Estimated position: x=270, y=205, orient = 0.0311
+
+
+
+Robot - left distance:  27.3
+Robot - front distance:  113.5
+PF - measurement update...
+Sim - Sensor dist,  left : 25.6
+Sim - Sensor dist,  front : 112.4
+Sim - in grid:  True
+Sim - gaussian error left:  0.138992443065
+Sim - gaussian error front:  0.97609047214
+Sim - gaussian error total:  0.148992443065
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  35.5170685443
+Sim - new y:  24.8784942323
+Sim - new orientation (rad):  1.58039563768
+Sim - new orientation (deg):  90.55
+PF - resampling...
+PF - estimated position: 
+[35.51706854428812, 24.878494232320065, 1.5803956376808657]
+
+Robot - left distance:  27.8
+Robot - front distance:  95.6
+PF - measurement update...
+Sim - Sensor dist,  left : 25.5187049987
+Sim - Sensor dist,  front : 95.1263492572
+Sim - in grid:  True
+Sim - gaussian error left:  0.104077020298
+Sim - gaussian error front:  0.995523150577
+Sim - gaussian error total:  0.114077020298
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  35.2796290215
+Sim - new y:  42.1555729074
+Sim - new orientation (rad):  1.58868135866
+Sim - new orientation (deg):  91.0247368421
+PF - resampling...
+PF - estimated position: 
+[35.27962902150966, 42.15557290738898, 1.5886813586561228]
+
+Robot - left distance:  28.1
+Robot - front distance:  77.8
+PF - measurement update...
+Sim - Sensor dist,  left : 25.2852722981
+Sim - Sensor dist,  front : 77.8584785556
+Sim - in grid:  True
+Sim - gaussian error left:  0.0740938891095
+Sim - gaussian error front:  0.99993160751
+Sim - gaussian error total:  0.0840938891095
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  34.894682609
+Sim - new y:  59.4299882862
+Sim - new orientation (rad):  1.59747230652
+Sim - new orientation (deg):  91.5284210526
+PF - resampling...
+PF - estimated position: 
+[34.8946826089923, 59.42998828622999, 1.5974723065201148]
+
+Robot - left distance:  29.0
+Robot - front distance:  60.3
+PF - measurement update...
+Sim - Sensor dist,  left : 24.9071019572
+Sim - Sensor dist,  front : 60.5951282496
+Sim - in grid:  True
+Sim - gaussian error left:  0.0245740932125
+Sim - gaussian error front:  0.998259502751
+Sim - gaussian error total:  0.0345740932125
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  34.3238683595
+Sim - new y:  76.6991999458
+Sim - new orientation (rad):  1.61020402412
+Sim - new orientation (deg):  92.2578947368
+PF - resampling...
+PF - estimated position: 
+[34.323868359480684, 76.69919994581106, 1.6102040241162419]
+
+Robot - left distance:  28.1
+Robot - front distance:  42.0
+PF - measurement update...
+Sim - Sensor dist,  left : 24.3505375267
+Sim - Sensor dist,  front : 43.3422140328
+Sim - in grid:  True
+Sim - gaussian error left:  0.0344104728173
+Sim - gaussian error front:  0.964610611767
+Sim - gaussian error total:  0.0444104728173
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  33.5881788678
+Sim - new y:  93.9622612583
+Sim - new orientation (rad):  1.61656988291
+Sim - new orientation (deg):  92.6226315789
+PF - resampling...
+PF - estimated position: 
+[33.58817886779616, 93.96226125834104, 1.6165698829143054]
+
+Robot - left distance:  27.7
+Robot - front distance:  23.6
+PF - measurement update...
+Sim - Sensor dist,  left : 23.6233968986
+Sim - Sensor dist,  front : 26.0755251962
+Sim - in grid:  True
+Sim - gaussian error left:  0.0249864320477
+Sim - gaussian error front:  0.884648843305
+Sim - gaussian error total:  0.0349864320477
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  33.5881788678
+Sim - new y:  93.9622612583
+Sim - new orientation (rad):  0.0457735561194
+Sim - new orientation (deg):  2.62263157895
+PF - resampling...
+PF - estimated position: 
+[33.58817886779616, 93.96226125834104, 0.04577355611940881]
+
+Robot - left distance:  21.3
+Robot - front distance:  71.0
+PF - measurement update...
+Sim - Sensor dist,  left : 26.0755251962
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.011530139727
+Sim - gaussian error front:  2.87151132181e-145
+Sim - gaussian error total:  0.021530139727
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  50.8572151286
+Sim - new y:  94.5269557618
+Sim - new orientation (rad):  0.0196028032829
+Sim - new orientation (deg):  1.12315789474
+PF - resampling...
+PF - estimated position: 
+[50.85721512857475, 94.5269557618044, 0.019602803282924963]
+
+Robot - left distance:  22.5
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 25.4798609412
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.0657410251186
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.0757410251186
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  68.1336163216
+Sim - new y:  94.8106575875
+Sim - new orientation (rad):  0.0132369444849
+Sim - new orientation (deg):  0.758421052632
+PF - resampling...
+PF - estimated position: 
+[68.13361632160192, 94.81065758751674, 0.013236944484861457]
+
+Robot - left distance:  23.5
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 25.1924255178
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.139439602227
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.149439602227
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  85.411249464
+Sim - new y:  95.0070713568
+Sim - new orientation (rad):  0.00949826550822
+Sim - new orientation (deg):  0.544210526316
+PF - resampling...
+PF - estimated position: 
+[85.41124946401685, 95.00707135678385, 0.009498265508220971]
+
+Robot - left distance:  24.1
+Robot - front distance:  183.5
+PF - measurement update...
+Sim - Sensor dist,  left : 24.9945071819
+Sim - Sensor dist,  front : 187.597663808
+Sim - in grid:  True
+Sim - gaussian error left:  0.180485723039
+Sim - gaussian error front:  0.714753912644
+Sim - gaussian error total:  0.190485723039
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  102.689432084
+Sim - new y:  95.1476178359
+Sim - new orientation (rad):  0.00677004030905
+Sim - new orientation (deg):  0.387894736842
+PF - resampling...
+PF - estimated position: 
+[102.68943208360491, 95.1476178359353, 0.006770040309051151]
+
+Robot - left distance:  25.9
+Robot - front distance:  165.7
+PF - measurement update...
+Sim - Sensor dist,  left : 24.8531808817
+Sim - Sensor dist,  front : 170.314700123
+Sim - in grid:  True
+Sim - gaussian error left:  0.173936585548
+Sim - gaussian error front:  0.65317568407
+Sim - gaussian error total:  0.183936585548
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  119.967417823
+Sim - new y:  95.3091146439
+Sim - new orientation (rad):  0.0119233545741
+Sim - new orientation (deg):  0.683157894737
+PF - resampling...
+PF - estimated position: 
+[119.96741782254574, 95.30911464389283, 0.011923354574149947]
+
+Robot - left distance:  200.0
+Robot - front distance:  147.8
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Sensor dist,  front : 153.04417174
+Sim - in grid:  True
+Sim - gaussian error left:  0.199471140201
+Sim - gaussian error front:  0.576934380155
+Sim - gaussian error total:  0.209471140201
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  119.967417823
+Sim - new y:  95.3091146439
+Sim - new orientation (rad):  0.797321517972
+Sim - new orientation (deg):  45.6831578947
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  138.074494369
+Sim - new y:  113.853216901
+Sim - new orientation (rad):  0.797321517972
+Sim - new orientation (deg):  45.6831578947
+PF - resampling...
+PF - estimated position: 
+[138.0744943685171, 113.85321690060718, 0.7973215179715982]
+
+Robot - left distance:  38.3
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.0
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  138.074494369
+Sim - new y:  113.853216901
+Sim - new orientation (rad):  1.58271968137
+Sim - new orientation (deg):  90.6831578947
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  137.765470525
+Sim - new y:  139.76951397
+Sim - new orientation (rad):  1.58271968137
+Sim - new orientation (deg):  90.6831578947
+PF - resampling...
+PF - estimated position: 
+[137.76547052489786, 139.7695139704669, 1.5827196813690465]
+
+Robot - left distance:  28.2
+Robot - front distance:  184.3
+PF - measurement update...
+Sim - Sensor dist,  left : 21.7677286497
+Sim - Sensor dist,  front : 198.245288594
+Sim - in grid:  True
+Sim - gaussian error left:  0.00113190858898
+Sim - gaussian error front:  0.0204571775136
+Sim - gaussian error total:  0.011131908589
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  137.445984231
+Sim - new y:  157.045195394
+Sim - new orientation (rad):  1.59585558048
+Sim - new orientation (deg):  91.4357894737
+PF - resampling...
+PF - estimated position: 
+[137.44598423105117, 157.04519539378575, 1.5958555804761616]
+
+Robot - left distance:  27.3
+Robot - front distance:  167.1
+PF - measurement update...
+Sim - Sensor dist,  left : 21.4558603227
+Sim - Sensor dist,  front : 181.014776879
+Sim - in grid:  True
+Sim - gaussian error left:  0.00279106569994
+Sim - gaussian error front:  0.0208079467099
+Sim - gaussian error total:  0.0127910656999
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  136.979002775
+Sim - new y:  174.317632254
+Sim - new orientation (rad):  1.59979635021
+Sim - new orientation (deg):  91.6615789474
+PF - resampling...
+PF - estimated position: 
+[136.97900277459394, 174.31763225371242, 1.5997963502082957]
+
+Robot - left distance:  24.7
+Robot - front distance:  149.9
+PF - measurement update...
+Sim - Sensor dist,  left : 20.9920340326
+Sim - Sensor dist,  front : 163.755426901
+Sim - in grid:  True
+Sim - gaussian error left:  0.0357676235221
+Sim - gaussian error front:  0.0215052735596
+Sim - gaussian error total:  0.0457676235221
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  136.541692799
+Sim - new y:  191.590817815
+Sim - new orientation (rad):  1.59242003763
+Sim - new orientation (deg):  91.2389473684
+PF - resampling...
+PF - estimated position: 
+[136.54169279938515, 191.59081781459756, 1.5924200376327615]
+
+Robot - left distance:  22.9
+Robot - front distance:  130.0
+PF - measurement update...
+Sim - Sensor dist,  left : 20.5488346075
+Sim - Sensor dist,  front : 146.445756595
+Sim - in grid:  True
+Sim - gaussian error left:  0.0999502165347
+Sim - gaussian error front:  0.00447495850732
+Sim - gaussian error total:  0.109950216535
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  136.264974782
+Sim - new y:  208.867270878
+Sim - new orientation (rad):  1.5812040007
+Sim - new orientation (deg):  90.5963157895
+PF - resampling...
+PF - estimated position: 
+[136.26497478181545, 208.86727087766812, 1.58120400070284]
+
+Robot - left distance:  21.1
+Robot - front distance:  112.3
+PF - measurement update...
+Sim - Sensor dist,  left : 20.2666140019
+Sim - Sensor dist,  front : 129.140264869
+Sim - in grid:  True
+Sim - gaussian error left:  0.18288417656
+Sim - gaussian error front:  0.00344135353041
+Sim - gaussian error total:  0.19288417656
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  136.229183477
+Sim - new y:  226.145793278
+Sim - new orientation (rad):  1.56453151337
+Sim - new orientation (deg):  89.6410526316
+PF - resampling...
+PF - estimated position: 
+[136.22918347675522, 226.14579327814454, 1.564531513374579]
+
+Robot - left distance:  19.0
+Robot - front distance:  94.1
+PF - measurement update...
+Sim - Sensor dist,  left : 20.2297767022
+Sim - Sensor dist,  front : 111.856598021
+Sim - in grid:  True
+Sim - gaussian error left:  0.165112279293
+Sim - gaussian error front:  0.00182543773554
+Sim - gaussian error total:  0.175112279293
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  136.541682201
+Sim - new y:  243.421324197
+Sim - new orientation (rad):  1.54088689498
+Sim - new orientation (deg):  88.2863157895
+PF - resampling...
+PF - estimated position: 
+[136.5416822008624, 243.421324197233, 1.540886894981771]
+
+Robot - left distance:  17.5
+Robot - front distance:  76.5
+PF - measurement update...
+Sim - Sensor dist,  left : 20.5553481938
+Sim - Sensor dist,  front : 94.6254699326
+Sim - in grid:  True
+Sim - gaussian error left:  0.0621018321712
+Sim - gaussian error front:  0.00140088204927
+Sim - gaussian error total:  0.0721018321712
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  137.291304802
+Sim - new y:  260.683290781
+Sim - new orientation (rad):  1.51390777912
+Sim - new orientation (deg):  86.7405263158
+PF - resampling...
+PF - estimated position: 
+[137.2913048017915, 260.6832907806455, 1.5139077791233113]
+
+Robot - left distance:  15.7
+Robot - front distance:  59.8
+PF - measurement update...
+Sim - Sensor dist,  left : 21.3420073021
+Sim - Sensor dist,  front : 77.4581918293
+Sim - in grid:  True
+Sim - gaussian error left:  0.00373085998344
+Sim - gaussian error front:  0.00195721100911
+Sim - gaussian error total:  0.0137308599834
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  138.558532746
+Sim - new y:  277.91473021
+Sim - new orientation (rad):  1.4808659406
+Sim - new orientation (deg):  84.8473684211
+PF - resampling...
+PF - estimated position: 
+[138.55853274561048, 277.9147302097962, 1.4808659406000286]
+
+Robot - left distance:  14.5
+Robot - front distance:  43.9
+PF - measurement update...
+Sim - Sensor dist,  left : 22.6906360181
+Sim - Sensor dist,  front : 60.3696343703
+Sim - in grid:  True
+Sim - gaussian error left:  4.5495346526e-05
+Sim - gaussian error front:  0.00440516692521
+Sim - gaussian error total:  0.0100454953465
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  140.415141354
+Sim - new y:  295.092542724
+Sim - new orientation (rad):  1.44539901301
+Sim - new orientation (deg):  82.8152631579
+PF - resampling...
+PF - estimated position: 
+[140.41514135399785, 295.09254272371123, 1.4453990130108174]
+
+Robot - left distance:  13.7
+Robot - front distance:  34.8
+PF - measurement update...
+Sim - Sensor dist,  left : 24.6875057788
+Sim - Sensor dist,  front : 43.3261714992
+Sim - in grid:  True
+Sim - gaussian error left:  5.57300622384e-08
+Sim - gaussian error front:  0.233654439666
+Sim - gaussian error total:  0.0100000557301
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  140.415141354
+Sim - new y:  295.092542724
+Sim - new orientation (rad):  6.1577879934
+Sim - new orientation (deg):  352.815263158
+PF - resampling...
+PF - estimated position: 
+[140.41514135399785, 295.09254272371123, 6.157787993395507]
+
+Robot - left distance:  33.0
+Robot - front distance:  117.1
+PF - measurement update...
+Sim - Sensor dist,  left : 43.3261714992
+Sim - Sensor dist,  front : 96.4204664093
+Sim - in grid:  True
+Sim - gaussian error left:  3.24554312301e-07
+Sim - gaussian error front:  0.000192991928613
+Sim - gaussian error total:  0.0100003245543
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  157.613069419
+Sim - new y:  293.450600575
+Sim - new orientation (rad):  6.21821312929
+Sim - new orientation (deg):  356.277368421
+PF - resampling...
+PF - estimated position: 
+[157.6130694194188, 293.4506005745207, 6.218213129288237]
+
+Robot - left distance:  33.4
+Robot - front distance:  99.3
+PF - measurement update...
+Sim - Sensor dist,  left : 44.6647392676
+Sim - Sensor dist,  front : 78.5738168657
+Sim - in grid:  True
+Sim - gaussian error left:  2.57745166597e-08
+Sim - gaussian error front:  0.000185678598061
+Sim - gaussian error total:  0.0100000257745
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  174.867622776
+Sim - new y:  292.544897332
+Sim - new orientation (rad):  6.24327238297
+Sim - new orientation (deg):  357.713157895
+PF - resampling...
+PF - estimated position: 
+[174.8676227759026, 292.5448973322525, 6.243272382969504]
+
+Robot - left distance:  32.6
+Robot - front distance:  81.4
+PF - measurement update...
+Sim - Sensor dist,  left : 45.4993031466
+Sim - Sensor dist,  front : 61.1890732716
+Sim - in grid:  True
+Sim - gaussian error left:  1.84921737245e-10
+Sim - gaussian error front:  0.000283122417153
+Sim - gaussian error total:  0.0100000001849
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  192.138412606
+Sim - new y:  292.029930423
+Sim - new orientation (rad):  6.26348145852
+Sim - new orientation (deg):  358.871052632
+PF - resampling...
+PF - estimated position: 
+[192.1384126057328, 292.02993042304286, 6.2634814585189105]
+
+Robot - left distance:  29.6
+Robot - front distance:  64.5
+PF - measurement update...
+Sim - Sensor dist,  left : 45.980936291
+Sim - Sensor dist,  front : 43.8720447418
+Sim - in grid:  True
+Sim - gaussian error left:  5.40536269822e-16
+Sim - gaussian error front:  0.000201393316643
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  209.414825266
+Sim - new y:  291.747101494
+Sim - new orientation (rad):  6.27015045345
+Sim - new orientation (deg):  359.253157895
+PF - resampling...
+PF - estimated position: 
+[209.41482526571565, 291.7471014944995, 6.270150453450215]
+
+Robot - left distance:  26.3
+Robot - front distance:  46.2
+PF - measurement update...
+Sim - Sensor dist,  left : 46.257677736
+Sim - Sensor dist,  front : 26.5882830005
+Sim - in grid:  True
+Sim - gaussian error left:  4.75291848922e-23
+Sim - gaussian error front:  0.000456286857228
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  226.691628499
+Sim - new y:  291.487839481
+Sim - new orientation (rad):  6.26620968372
+Sim - new orientation (deg):  359.027368421
+PF - resampling...
+PF - estimated position: 
+[226.69162849922506, 291.48783948128766, 6.266209683718081]
+
+Robot - left distance:  25.1
+Robot - front distance:  29.0
+PF - measurement update...
+Sim - Sensor dist,  left : 46.5203041018
+Sim - Sensor dist,  front : 9.31115389887
+Sim - in grid:  True
+Sim - gaussian error left:  2.46316775628e-26
+Sim - gaussian error front:  0.000429446573806
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  226.691628499
+Sim - new y:  291.487839481
+Sim - new orientation (rad):  4.69541335692
+Sim - new orientation (deg):  269.027368421
+PF - resampling...
+PF - estimated position: 
+[226.69162849922506, 291.48783948128766, 4.695413356923184]
+
+Robot - left distance:  25.1
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 9.31115389887
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  5.84585597857e-15
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  226.369521601
+Sim - new y:  274.212090477
+Sim - new orientation (rad):  4.69207885946
+Sim - new orientation (deg):  268.836315789
+PF - resampling...
+PF - estimated position: 
+[226.36952160081728, 274.21209047738955, 4.6920788594575304]
+
+Robot - left distance:  23.7
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 123.658044491
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.0
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  225.949665764
+Sim - new y:  256.938478555
+Sim - new orientation (rad):  4.68409627462
+Sim - new orientation (deg):  268.378947368
+PF - resampling...
+PF - estimated position: 
+[225.94966576438583, 256.93847855510467, 4.684096274615515]
+
+Robot - left distance:  26.7
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 124.104004254
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.0
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  225.547264935
+Sim - new y:  239.664477368
+Sim - new orientation (rad):  4.69409976701
+Sim - new orientation (deg):  268.952105263
+PF - resampling...
+PF - estimated position: 
+[225.5472649351825, 239.66447736797207, 4.694099767012472]
+
+Robot - left distance:  35.7
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 124.475225105
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.0
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  225.65812001
+Sim - new y:  222.387831094
+Sim - new orientation (rad):  4.74351095673
+Sim - new orientation (deg):  271.783157895
+PF - resampling...
+PF - estimated position: 
+[225.65812000979378, 222.38783109412879, 4.743510956730774]
+
+Robot - left distance:  80.0
+Robot - front distance:  200.0
+PF - measurement update...
+Sim - Sensor dist,  left : 124.406966512
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  1.76786035379e-108
+Sim - gaussian error front:  1.0
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  225.65812001
+Sim - new y:  222.387831094
+Sim - new orientation (rad):  5.52890912013
+Sim - new orientation (deg):  316.783157895
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  244.546414372
+Sim - new y:  204.640090798
+Sim - new orientation (rad):  5.52890912013
+Sim - new orientation (deg):  316.783157895
+PF - resampling...
+PF - estimated position: 
+[244.54641437226522, 204.64009079780448, 5.5289091201282226]
+
+Robot - left distance:  67.2
+Robot - front distance:  103.8
+PF - measurement update...
+Sim - Sensor dist,  left : 200.0
+Sim - Sensor dist,  front : 200.0
+Sim - in grid:  True
+Sim - gaussian error left:  0.0
+Sim - gaussian error front:  4.13957254505e-81
+Sim - gaussian error total:  0.01
+PF - update motion...
+Sim - turn in place...
+Sim - new x:  244.546414372
+Sim - new y:  204.640090798
+Sim - new orientation (rad):  0.0311219763461
+Sim - new orientation (deg):  1.78315789474
+PF - update motion...
+Sim - straight or slight turn...
+Sim - new x:  270.452002915
+Sim - new y:  205.446584312
+Sim - new orientation (rad):  0.0311219763461
+Sim - new orientation (deg):  1.78315789474
+PF - resampling...
+PF - estimated position: 
+[270.4520029152851, 205.44658431228703, 0.0311219763460846]
+
+Measurement history: 
+[[27.3, 113.5], [27.8, 95.6], [28.1, 77.8], [29.0, 60.3], [28.1, 42.0], [27.7, 23.6], [21.3, 71.0], [22.5, 200.0], [23.5, 200.0], [24.1, 183.5], [25.9, 165.7], [200.0, 147.8], [38.3, 200.0], [28.2, 184.3], [27.3, 167.1], [24.7, 149.9], [22.9, 130.0], [21.1, 112.3], [19.0, 94.1], [17.5, 76.5], [15.7, 59.8], [14.5, 43.9], [13.7, 34.8], [33.0, 117.1], [33.4, 99.3], [32.6, 81.4], [29.6, 64.5], [26.3, 46.2], [25.1, 29.0], [25.1, 200.0], [23.7, 200.0], [26.7, 200.0], [35.7, 200.0], [80.0, 200.0], [67.2, 103.8]]
+
+PF: final particle set: 
+[270.45 205.44]
