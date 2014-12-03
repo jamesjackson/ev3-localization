@@ -33,12 +33,12 @@ saved_real_ends.append([248.9, 112.1, 5.0])
 # USER SETTINGS #
 #################
 
-run_steps = 25 # no of motion steps (should be <= steps in saved set for simulation mode)
+run_steps = 25 # no of motion steps (should be <= steps in saved set for simulation mode - it must be equal for correct comparison to real end position)
 single_particle_mode = False # debugging mode with a single particle, uses known starting point
 real_robot_mode = False # run on real robot rather than simulating with logged robot data
 active_set = 3 # active data set (see above) for simulation mode
-motion_noise_on = False
-known_starting_orientation = True
+motion_noise_on = True
+known_starting_orientation = True # simulate compass sensor
 pf_number_particles = 1000 # number of particles in particle filter
 sensor_noise_left = 10.0 # left sensor noise, 10.0 works ok
 sensor_noise_front = 15.0 # front sensor noise, 15.0 works ok
@@ -238,33 +238,51 @@ class robot_sim:
             angle_to_wall = acos((cos(self.orientation + orientation_offset) * (y1 - y2) + sin(self.orientation + orientation_offset) * (x2 - x1)) / sqrt((y1 - y2) ** 2 + (x2 - x1) ** 2 ))
 
             # check that we don't exceed the sonar cone
-            if abs(angle_to_wall) <= sonar_max_angle:
+            if abs(angle_to_wall) > sonar_max_angle:
+                continue
 
-                # accommodate differences between sensor mount positions and robot center (mid-point between wheels)
-                sensor_x = self.x + sensor_dist_offset * cos(self.orientation + orientation_offset)
-                sensor_y = self.y + sensor_dist_offset * sin(self.orientation + orientation_offset)
+            # accommodate differences between sensor mount positions and robot center (mid-point between wheels)
+            sensor_x = self.x + sensor_dist_offset * cos(self.orientation + orientation_offset)
+            sensor_y = self.y + sensor_dist_offset * sin(self.orientation + orientation_offset)
 
-                # forward distance from sensor to wall
-                dist_to_wall = ((y2 - y1) * (x1 - sensor_x) - (x2 - x1) * (y1 - sensor_y)) / ((y2 - y1) * cos(self.orientation + orientation_offset) - (x2 - x1) * sin(self.orientation + orientation_offset))
+            # forward vector from sensor to wall
+            dist_to_wall = ((y2 - y1) * (x1 - sensor_x) - (x2 - x1) * (y1 - sensor_y)) / ((y2 - y1) * cos(self.orientation + orientation_offset) - (x2 - x1) * sin(self.orientation + orientation_offset))
 
-                # intercept point on wall based on following forward vector from sensor
-                x_intercept_point = sensor_x + dist_to_wall * cos(self.orientation + orientation_offset)
-                y_intercept_point = sensor_y + dist_to_wall * sin(self.orientation + orientation_offset)
+            # must be *forward* vector
+            if dist_to_wall < 0:
+                continue
 
-                # check that intercept point is within the endpoints of the wall
-                if (x1 - x2) == 0:
-                    if ((y1 <= y_intercept_point <= y2) or (y2 <= y_intercept_point <= y1)):
-                        on_line_segment = True
+            # if distance is beyond sonar range, ignore it
+            if dist_to_wall > sonar_max_distance:
+                continue
 
-                elif (y1 - y2) == 0:
-                    if ((x1 <= x_intercept_point <= x2) or (x2 <= x_intercept_point <= x1)):
-                        on_line_segment = True
+            # intercept point on wall based on following forward vector from sensor
+            x_intercept_point = sensor_x + dist_to_wall * cos(self.orientation + orientation_offset)
+            y_intercept_point = sensor_y + dist_to_wall * sin(self.orientation + orientation_offset)
 
-                elif ((x1 <= x_intercept_point <= x2) or (x2 <= x_intercept_point <= x1)) and ((y1 <= y_intercept_point <= y2) or (y2 <= y_intercept_point <= y1)):
+            # check that intercept point is within the endpoints of the wall
+            if (x1 - x2) == 0:
+                if ((y1 <= y_intercept_point <= y2) or (y2 <= y_intercept_point <= y1)):
                     on_line_segment = True
 
-                if on_line_segment and (abs(dist_to_wall) <= sonar_max_distance):
-                    close_walls.append(abs(dist_to_wall))
+            elif (y1 - y2) == 0:
+                if ((x1 <= x_intercept_point <= x2) or (x2 <= x_intercept_point <= x1)):
+                    on_line_segment = True
+
+            elif ((x1 <= x_intercept_point <= x2) or (x2 <= x_intercept_point <= x1)) and ((y1 <= y_intercept_point <= y2) or (y2 <= y_intercept_point <= y1)):
+                on_line_segment = True
+
+            if not on_line_segment:
+                continue
+
+            # everything looks good, add wall as a candidate
+            close_walls.append(dist_to_wall)
+
+            if single_particle_mode:
+                print 'Sim - Found valid wall: ', wall
+                print 'Sim - Angle to wall: ', angle_to_wall
+                print 'Sim - Distance to wall: ', dist_to_wall
+                print 'Sim - Wall intercept point: ', x_intercept_point, y_intercept_point
 
         if not close_walls:
             if single_particle_mode:
@@ -352,7 +370,7 @@ class robot_sim:
         return result
 
 
-    def measurement_prob(self, measurements, grid):
+    def measurement_prob(self, measurements):
 
         predicted_measurements = []
         predicted_measurements.append(self.find_closest_wall(walls, 'left'))
@@ -378,17 +396,9 @@ class robot_sim:
         error_front = (exp(- (error_sense_dist_front ** 2) / (self.sensor_noise_front ** 2) / 2.0) /
                       sqrt(2.0 * pi * (self.sensor_noise_front ** 2)))
 
-        # error = error_left * error_front + likelihood_constant # INCLUDE FRONT SENSOR IN CALCULATION
         error = error_left * error_front + robust_likelihood_constant
 
-        in_grid = grid.is_available(int(self.x), int(self.y))
-
-        # penalize out of bounds particles (includes obstacle locations)
-        # if not in_grid:
-        #     error *= 0.001
-
         if single_particle_mode:
-            print 'Sim - In grid: ', in_grid
             print 'Sim - gaussian error left: ', error_left
             print 'Sim - gaussian error front: ', error_front
             print 'Sim - gaussian error total: ', error
@@ -448,7 +458,7 @@ if real_robot_mode:
 
 class particle_filter:
 
-    def __init__(self, grid):
+    def __init__(self):
 
         self.p = []
         self.w = []
@@ -460,15 +470,15 @@ class particle_filter:
 
         for i in range(self.count):
             r = robot_sim()
-            while not (grid.is_available(int(r.x), int(r.y))): # re-create initial particle if it lands on an unavailable spot
+            while not (mygrid.is_available(int(r.x), int(r.y))): # re-create initial particle if it lands on an unavailable spot
                 r = robot_sim()
             r.set_noise(sensor_noise_left, sensor_noise_front, steering_noise, distance_noise, turning_noise)
             self.p.append(r)
 
-    def measurement_update(self, measurements, grid):
+    def measurement_update(self, measurements):
 
         for i in range(self.count):
-            self.w.append(self.p[i].measurement_prob(measurements, grid))
+            self.w.append(self.p[i].measurement_prob(measurements))
 
     def motion_update(self, motion):
 
@@ -516,23 +526,22 @@ class particle_filter:
         return [x / len(self.p), y / len(self.p), orientation / len(self.p)]
 
 
-
 if real_robot_mode:
     ev3 = robot_real() # real robot
 
 mygrid = Grid(world_size_y, world_size_x)
 mygrid.add_obstacle(130, 348, 0, 106) # bed
 mygrid.add_obstacle(279, 348, 255, 360) # dresser
-mygrid.add_obstacle(0, 162, 283, 360) # table
+mygrid.add_obstacle(0, 164, 283, 360) # table
 
 walls = []
 # format of wall is [x1, y1, x2, y2]
 walls.append([0, 0, 0, 130]) # wall 1
 walls.append([0, 130, 106, 130]) # wall 2
 walls.append([106, 130, 106, 348]) # wall 3
-walls.append([106, 348, 246, 348]) # wall 4
-walls.append([246, 348, 246, 279]) # wall 5
-walls.append([246, 279, 360, 279]) # wall 6
+walls.append([106, 348, 255, 348]) # wall 4
+walls.append([255, 348, 255, 279]) # wall 5
+walls.append([255, 279, 360, 279]) # wall 6
 walls.append([360, 279, 360, 164]) # wall 7
 walls.append([360, 164, 283, 164]) # wall 8
 walls.append([283, 164, 283, 0]) # wall 9
@@ -548,7 +557,7 @@ else:
 
 
 # Initialize particle filter
-pf = particle_filter(mygrid)
+pf = particle_filter()
 
 lastError = 0
 derivative = 0
@@ -575,21 +584,21 @@ for i in range(run_steps):
     print 'Robot - Sensor dist, front: ', sonar_f
 
     print 'PF - measurement update...'
-    pf.measurement_update(measurements, mygrid)
+    pf.measurement_update(measurements)
 
     # Move
 
     if sonar_f < (target_wall_dist * 1.5):
         if real_robot_mode:
             ev3.turn_in_place(-90.0)
-        motion = ['turn_in_place', -90]
+        motion = ['turn_in_place', -90.0]
         print 'PF - update motion...'
         pf.motion_update(motion)
 
     elif sonar_l > (target_wall_dist * 1.5):
         if real_robot_mode:
-            ev3.turn_in_place(45)
-        motion = ['turn_in_place', 45]
+            ev3.turn_in_place(45.0)
+        motion = ['turn_in_place', 45.0]
         print 'PF - update motion...'
         pf.motion_update(motion)
         if real_robot_mode:
@@ -631,6 +640,11 @@ for i in range(run_steps):
     print 'PF - estimated position: '
     estimated_position = pf.get_position()
     print estimated_position
+
+    print ''
+    print 'PF: current particle set: '
+    print pf.p
+
 
 
 # print measurement history on real run
