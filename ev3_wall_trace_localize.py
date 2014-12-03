@@ -33,15 +33,15 @@ saved_real_ends.append([248.9, 112.1, 5.0])
 # USER SETTINGS #
 #################
 
-run_steps = 25 # no of motion steps (should be <= steps in saved set for simulation mode - it must be equal for correct comparison to real end position)
+run_steps = 25 # only applies to real robot
 single_particle_mode = False # debugging mode with a single particle, uses known starting point
 real_robot_mode = False # run on real robot rather than simulating with logged robot data
 active_set = 3 # active data set (see above) for simulation mode
 motion_noise_on = True
 known_starting_orientation = True # simulate compass sensor
 pf_number_particles = 1000 # number of particles in particle filter
-sensor_noise_left = 10.0 # left sensor noise, 10.0 works ok
-sensor_noise_front = 15.0 # front sensor noise, 15.0 works ok
+sensor_noise_left = 10.0 # left sensor noise
+sensor_noise_front = 15.0 # front sensor noise
 base_steering_noise = 0.03
 base_distance_noise = 1.0
 base_turning_noise = 0.05
@@ -552,8 +552,7 @@ if real_robot_mode:
     measurement_history = [] # store all measurements
 else:
     measurement_history = saved_measurements[active_set - 1]
-    if run_steps > saved_steps[active_set - 1]:
-        raise ValueError, 'Too many steps for data set'
+    run_steps = saved_steps[active_set - 1]
 
 
 # Initialize particle filter
