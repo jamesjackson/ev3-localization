@@ -29,15 +29,15 @@
 - SSH to robot IP address as root/r00tme
  
 > jamess-air-2:~ fiberhog$ ssh root@192.168.1.16
->
+> 
 > root@192.168.1.16's password: 
->
+> 
 > root@ev3dev:~#
 
 - Setup Python EV3 environment:
  
 > root@ev3dev:~# workon ev3_py27
->
+> 
 >(ev3_py27)root@ev3dev:~# 
 
 
@@ -68,7 +68,7 @@ A list is pre-populated with all walls, and used to determine the closest valid 
 ######Running on Real Robot - Single Particle Mode (Data Gathering/Debugging)
 
 > run_steps = 25 (set to desired number of steps)
->
+> 
 > single_particle_mode = True
 
 
